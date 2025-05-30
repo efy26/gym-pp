@@ -1,14 +1,15 @@
 import { IoMdMenu } from "react-icons/io";
 import { FaGraduationCap } from "react-icons/fa";
-export default function NavBar() {
+export default function NavBar({setPage}) {
     return (
-        <nav class="flex text-center ">
+        <nav className="flex text-center ">
             <IoMdMenu className="text-2xl sm:hidden" />
-            <ul className="flex space-x-4 hidden sm:flex">
-                <li>Home</li>
-                <li>Training</li>
-                <li>About</li>
-                <li>Contact</li>
+            <ul id="menu-liens" className=" flex justify-around space-x-40 hidden lg:flex">
+
+                <li className="cursor-pointer" onClick={() => {setPage('home')}}>Home</li>
+                <li className="cursor-pointer" onClick={() => {setPage('training')}}>Training</li>
+                <li className="cursor-pointer" onClick={() => {setPage('about')}}>About</li>
+                <li className="cursor-pointer" onClick={() => {setPage('contact')}}>Contact</li>
             </ul>
         </nav>
     );

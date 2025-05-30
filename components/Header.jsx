@@ -1,12 +1,11 @@
-import Image from "next/image";
-import logo from "@/public/img/logos.webp";
+
 import NavBar from "@/components/NavBar";
 import BackGround from "@/public/img/image.webp";
-export default function Header() {
+
+export default function Header({changePage}) {
     return (
-        <header class="flex  h-15 items-center bg-green-900 text-white w-full gap-2">
-            <Image src={logo} alt="Logo"  class="ml-2 size-7 rounded-sm"/>
-            <NavBar  />
+        <header className="flex justify-center sticky top-0 flex h-27 items-center bg-white text-black w-full gap-2 px-8">
+            <NavBar setPage = {changePage} />
         </header>
     );
 }

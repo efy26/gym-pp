@@ -20,7 +20,30 @@
 }
 
 body {
-  background: var(--background);
+  background: black;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+#citation-home {
+  background-color: rgba(0, 0, 0, 0.716);
+  padding: 1rem;
+  box-shadow: 0px 0px 5px 2px black;
+  border-radius: 1rem;
+  font-family: Courier, monospace;
+  color: wheat;
+}
+footer {
+  font-family: Courier, monospace;
+}
+
+#training, #about, #contact {
+  color: rgb(80, 11, 11);
+}
+#menu-liens li{
+  font-family: Courier;
+  transition: 0.2s ease-in;
+}
+
+#menu-liens li:hover{
+  color: wheat;
 }
