@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import BackGround from "@/public/img/image.webp";
 

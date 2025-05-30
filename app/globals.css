@@ -49,3 +49,18 @@ footer {
 #menu-liens li:hover{
   color: wheat;
 }
+/* #container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+#contact-page, #about-page, #training-page {
+  margin-top: 6rem;
+  width: 65%;
+  /* background-color: red; */
+}
+#titre-page-training,#titre-page-about, #titre-page-contact {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: rgba(233, 177, 74, 0.625);
+  font-weight: bolder;
+}
