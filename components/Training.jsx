@@ -11,7 +11,6 @@ export default function Training() {
             <div id='container' className='flex justify-center'>
                 <div id='training-page'>
                     <h1 id='titre-page-training'>TRAINING</h1>
-
                     <Timer/>
                     <Timer2/>
                     <Timer3/>
