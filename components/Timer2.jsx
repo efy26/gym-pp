@@ -13,10 +13,6 @@ export default function Timer({ compte }) {
     const heures = Math.floor((difference / (1000 * 60 * 60)) % 24);
     const jours = Math.floor(difference / (1000 * 60 * 60 * 24));
 
-console.log(`${jours} j, ${heures} h, ${minutes} min, ${secondes} sec`);
-
-
-    
     const [decompte, setCompte] = useState(compte || timerShow);
     useEffect(() => {
         // Exécuté au chargement du composant dans la page
@@ -33,7 +29,11 @@ console.log(`${jours} j, ${heures} h, ${minutes} min, ${secondes} sec`);
         };
     }, [decompte]);
     return <div id='timer2-container'>
+<<<<<<< HEAD
                 <Image  src={Timer2} alt="Logo" id="timer2-img" />
+=======
+                <Image  src={Timer2} alt="Logo" id="timer2-img" className=""/>
+>>>>>>> mise a joue design page contact
                 <div id='timer2'>
                 <span>
                             {jours} 
