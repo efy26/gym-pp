@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
+import Timer2 from "@/public/img/timer2.jpeg";
 import { useEffect, useState } from 'react'
 
 export default function Timer({ compte }) {
-    const timerShow = new Date("2025-12-01T10:00:00").getTime();
+    const timerShow = new Date("2025-12-01T10:00:20").getTime();
     const dateNow = Date.now();
     const difference = dateNow - timerShow;
     const secondes = Math.floor((difference / 1000) % 60);
@@ -30,5 +32,25 @@ console.log(`${jours} j, ${heures} h, ${minutes} min, ${secondes} sec`);
             clearInterval(intervalID);
         };
     }, [decompte]);
-    return <div >{`${jours} j, ${heures} h, ${minutes} min, ${secondes} sec`}</div>;
+    return <div id='timer2-container'>
+                <Image  src={Timer2} alt="Logo" id="timer2-img" />
+                <div id='timer2'>
+                <span>
+                            {jours} 
+                            <div>Jr(s)</div>
+                        </span>
+                        <span>
+                            {heures}
+                            <div>Hr(s)</div>
+                        </span>
+                        <span>
+                            {minutes}
+                            <div>Min(s)</div>
+                        </span>
+                        <span>
+                            {secondes}
+                            <div>Séc(s)</div>
+                        </span>
+                </div>
+            </div>;
 }

@@ -49,18 +49,49 @@ footer {
 #menu-liens li:hover{
   color: wheat;
 }
-/* #container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
+
 #contact-page, #about-page, #training-page {
   margin-top: 6rem;
   width: 65%;
-  /* background-color: red; */
+  
 }
 #titre-page-training,#titre-page-about, #titre-page-contact {
   font-family:Georgia, 'Times New Roman', Times, serif;
   color: rgba(233, 177, 74, 0.625);
   font-weight: bolder;
+}
+#timer3-container, #timer2-container, #timer1-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#timer3, #timer2, #timer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#timer3 span, #timer2 span, #timer1 span{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(168, 168, 168, 0.177);
+  color: rgb(97, 97, 97);
+  padding: .5rem;
+  border-radius: 1rem;
+  border: 1px solid red;
+  font-family: Courier, monospace;
+}
+#timer1 span {
+    border: 1px solid blue;
+}
+#timer2 span {
+  border: 1px solid greenyellow;
+}
+#timer3-img, #timer2-img, #timer1-img {
+  width: 35%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
