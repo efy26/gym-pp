@@ -33,7 +33,11 @@ console.log(`${jours} j, ${heures} h, ${minutes} min, ${secondes} sec`);
         };
     }, [decompte]);
     return <div id='timer1-container'>
+<<<<<<< HEAD
                 <Image  src={Timer1} alt="Logo" id="timer1-img"/>
+=======
+                <Image  src={Timer1} alt="Logo" id="timer1-img" className=""/>
+>>>>>>> mise a joue design page contact
                 <div id='timer1'>
                 <span>
                             {jours} 

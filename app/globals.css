@@ -52,10 +52,82 @@ footer {
 #menu-liens li:hover{
   color: wheat;
 }
- 
+
 #contact-page, #about-page, #training-page {
   margin-top: 6rem;
   width: 65%;
+}
+
+#contact-page, #about-page, #training-page {
+  margin-top: 6rem;
+  width: 65%;
+}
+#about-page div {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  margin-top: 3rem;
+  
+}
+#about-page div p {
+  width: 40%;
+  font-family: monospace
+}
+#about-img {
+  width: 70%;
+}
+#contact-page div{
+  display: flex;
+  justify-content: space-between;
+}
+#contact-form{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  width: 100%;
+
+}
+#contact-form span{
+  color: gray;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 30%;
+}
+form {
+  position: relative;
+  width: 60%;
+}
+#block-form {
+  display: flex;
+  gap: .3rem;
+}
+textarea {
+  width: 50%;
+  border: 1px solid black;
+}
+#input-text {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  width: 50%;
+}
+
+#input-text input {
+  height: 2rem;
+  border: 1px solid black;
+}
+#btn-contact {
+  position: absolute;
+  right: 0;
+  margin-top: .3rem;
+  cursor: pointer;
+  background-color: rgba(51, 36, 9, 0.843);
+  padding: .5rem;
+  color: white;
+  transition: 0.5s;
+}
+#btn-contact:hover {
+  background-color: rgba(51, 36, 9, 0.625);
 }
  
 #titre-page-training,#titre-page-about, #titre-page-contact {
@@ -100,4 +172,3 @@ footer {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
- 
