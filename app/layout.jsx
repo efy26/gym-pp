@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Training from "@/components/Training";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import SectionUniverselle from "@/components/home/SectionUniverselle";
 import Home from "@/app/page";
 
 import { useState } from "react";
@@ -19,10 +20,12 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 export default function RootLayout({ children }) {
     const [currentPage, setCurrentPage] = useState("home");
+    
     return (
         <html lang="fr">
             <body className="flex flex-col min-h-screen">
                 <Header changePage = {setCurrentPage}/>
+                {/* <SectionUniverselle/> */}
                 <main className="flex-1">
                      {/* {children} */}
                      {currentPage === "home" ? (
