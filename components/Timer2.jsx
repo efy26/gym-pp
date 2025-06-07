@@ -29,13 +29,30 @@ export default function Timer({ compte }) {
         };
     }, [decompte]);
     return <div id='timer2-container'>
-<<<<<<< HEAD
-                <Image  src={Timer2} alt="Logo" id="timer2-img" />
-=======
+
                 <Image  src={Timer2} alt="Logo" id="timer2-img" className=""/>
->>>>>>> mise a joue design page contact
                 <div id='timer2'>
-                <span>
+                        <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit.
+                                Consequuntur nulla provident 
+                                itaque dolor omnis! Delectus corrupti 
+                                magnam doloremque non praesentium quis 
+                                fugit numquam aliquam quidem quia porro 
+                                eaque, dignissimos tempore.
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit.
+                                Consequuntur nulla provident 
+                                itaque dolor omnis! Delectus corrupti 
+                                magnam doloremque non praesentium quis 
+                                fugit numquam aliquam quidem quia porro 
+                                eaque, dignissimos tempore.
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit.
+                                Consequuntur nulla provident.
+                    </p>
+                    <div id="container-countTimer1">
+                        <span>
                             {jours} 
                             <div>Jr(s)</div>
                         </span>
@@ -51,6 +68,7 @@ export default function Timer({ compte }) {
                             {secondes}
                             <div>Séc(s)</div>
                         </span>
+                    </div>
                 </div>
             </div>;
 }

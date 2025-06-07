@@ -13,8 +13,6 @@ export default function Timer({ compte }) {
     const heures = Math.floor((difference / (1000 * 60 * 60)) % 24);
     const jours = Math.floor(difference / (1000 * 60 * 60 * 24));
 
-console.log(`${jours} j, ${heures} h, ${minutes} min, ${secondes} sec`);
-
 
     
     const [decompte, setCompte] = useState(compte || timerShow);
@@ -32,14 +30,30 @@ console.log(`${jours} j, ${heures} h, ${minutes} min, ${secondes} sec`);
             clearInterval(intervalID);
         };
     }, [decompte]);
-    return <div id='timer1-container'>
-<<<<<<< HEAD
+    return <div id='timer1-container'> 
                 <Image  src={Timer1} alt="Logo" id="timer1-img"/>
-=======
-                <Image  src={Timer1} alt="Logo" id="timer1-img" className=""/>
->>>>>>> mise a joue design page contact
                 <div id='timer1'>
-                <span>
+                    <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit.
+                                Consequuntur nulla provident 
+                                itaque dolor omnis! Delectus corrupti 
+                                magnam doloremque non praesentium quis 
+                                fugit numquam aliquam quidem quia porro 
+                                eaque, dignissimos tempore.
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit.
+                                Consequuntur nulla provident 
+                                itaque dolor omnis! Delectus corrupti 
+                                magnam doloremque non praesentium quis 
+                                fugit numquam aliquam quidem quia porro 
+                                eaque, dignissimos tempore.
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit.
+                                Consequuntur nulla provident.
+                    </p>
+                    <div id="container-countTimer1">
+                        <span>
                             {jours} 
                             <div>Jr(s)</div>
                         </span>
@@ -55,6 +69,7 @@ console.log(`${jours} j, ${heures} h, ${minutes} min, ${secondes} sec`);
                             {secondes}
                             <div>Séc(s)</div>
                         </span>
+                    </div>
                 </div>
             </div>;
 }

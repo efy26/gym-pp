@@ -18,11 +18,11 @@ export default function Contact() {
                             <form>
                                 <div id='block-form'>
                                     <div id='input-text'>
-                                        <input type="text" />
-                                        <input type="email" />
-                                        <input type="tel" />
+                                        <input type="text" placeholder='Nom'/>
+                                        <input type="email" placeholder='Mail'/>
+                                        <input type="tel" placeholder='Telephone'/>
                                     </div>
-                                    <textarea name="" id="textarea"></textarea>
+                                    <textarea name="" id="textarea" placeholder='Redigez votre message ici...'></textarea>
                                 </div>
                                 <input id="btn-contact" type="submit" value="Envoyer" />
                             </form>
