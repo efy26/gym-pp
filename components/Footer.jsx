@@ -18,7 +18,7 @@ export default function Footer() {
                     <Image src={twitter} alt="x" id="logo" className=" size-7 cursor-pointer rounded-lg"/>
                 </a>
             </div>
-            <p className="mt-10">
+            <p id="copyrigth" className="mt-10">
                 &copy; 2025 Gym-app, créer par le groupe gym-app.
             </p>
         </footer>

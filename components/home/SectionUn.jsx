@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function SectionUn() {
     return (
         <section id="section-un" className="bg-[url(@/public/img/image.webp)] bg-cover bg-center bg-no-repeat min-w-100 h-200 flex  flex-col items-center">
-            <Link href="/">
-                <Image src={logo} alt="Logo" id="logo" className="size-40 mt-80 cursor-pointer"/>
+            <Link id="link-home" href="/" className="size-40 mt-80 cursor-pointer">
+                <Image src={logo} alt="Logo" id="logo" />
             </Link>
             <p id="citation-home" className="max-w-170 font-mono mt-10 text-shadow-lg/500">
                 "Chez nous, le fitness ne se limite
