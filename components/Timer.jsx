@@ -13,8 +13,6 @@ export default function Timer({ compte }) {
     const heures = Math.floor((difference / (1000 * 60 * 60)) % 24);
     const jours = Math.floor(difference / (1000 * 60 * 60 * 24));
 
-
-    
     const [decompte, setCompte] = useState(compte || timerShow);
     useEffect(() => {
         // Exécuté au chargement du composant dans la page

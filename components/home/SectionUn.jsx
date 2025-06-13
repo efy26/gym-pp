@@ -1,9 +1,13 @@
 import Image from "next/image";
 import logo from "@/public/img/logos.webp";
-export default function SectionUn({changePage}) {
+import Link from "next/link";
+
+export default function SectionUn() {
     return (
         <section id="section-un" className="bg-[url(@/public/img/image.webp)] bg-cover bg-center bg-no-repeat min-w-100 h-200 flex  flex-col items-center">
-            <Image onClick={() => {changePage('home')}} src={logo} alt="Logo" id="logo" className="size-40 mt-80 cursor-pointer"/>
+            <Link href="/">
+                <Image src={logo} alt="Logo" id="logo" className="size-40 mt-80 cursor-pointer"/>
+            </Link>
             <p id="citation-home" className="max-w-170 font-mono mt-10 text-shadow-lg/500">
                 "Chez nous, le fitness ne se limite
                 pas aux machines et aux haltères : 

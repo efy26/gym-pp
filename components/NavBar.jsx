@@ -1,14 +1,21 @@
-import { IoMdMenu } from "react-icons/io";
-import { FaGraduationCap } from "react-icons/fa";
-export default function NavBar({setPage}) {
-    return (
-        <nav id="">
-            <ul id="menu-liens">
+import Link from "next/link";
 
-                <li className="cursor-pointer" onClick={() => {setPage('home')}}>Home</li>
-                <li className="cursor-pointer" onClick={() => {setPage('training')}}>Training</li>
-                <li className="cursor-pointer" onClick={() => {setPage('about')}}>About</li>
-                <li className="cursor-pointer" onClick={() => {setPage('contact')}}>Contact</li>
+export default function NavBar() {
+    return (
+        <nav>
+            <ul id="menu-liens">
+                <li className="cursor-pointer" >
+                    <Link href="/">Home</Link>
+                </li>
+                <li className="cursor-pointer" >
+                    <Link href="/training">Training</Link>
+                </li>
+                <li className="cursor-pointer" >
+                    <Link href="/about">About</Link>
+                </li>
+                <li className="cursor-pointer" >
+                    <Link href="/contact">Contact</Link>
+                </li>
             </ul>
         </nav>
     );
