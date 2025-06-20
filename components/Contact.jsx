@@ -34,7 +34,28 @@ export default function Contact() {
             subject: getValues().sujet,
             message: getValues().message,
         };
-// ICI=============================================================
+        
+
+emailjs
+            .send(
+                "service_y7ncq9e", // Service ID
+                "template_079ibwf", // Template ID
+                templateParams,
+                "X1N170CkLqZC-0xe0" //USER PUBLIC KEY
+            )
+            .then(
+                (result) => {
+                    setResult("message envoye avec succes");
+                    setSuccess(true);
+                    // Reset the form after successful submission
+                    reset();
+                },
+                (error) => {
+                    console.log("FAILED...", error);
+                }
+            );
+    };
+ 
        
     return (
         <div  className='flex flex-col'>
