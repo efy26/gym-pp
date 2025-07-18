@@ -1,20 +1,21 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+"use client";
+import Body from "@/components/Body";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
+
+import MyContextProvider from "@/Provider/MyContextProvider";
+import i18n from "@/i18next";
+import { appWithTranslation } from "next-i18next";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="fr">
-            <body className="flex flex-col min-h-screen">
-                <Header />
-                <main className="flex-1">
-                     {children}
-                </main>
-                <Footer />
-            </body>
+        <html lang="en">
+            <MyContextProvider>
+                <Body children={children} />
+            </MyContextProvider>
         </html>
     );
 }

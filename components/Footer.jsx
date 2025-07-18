@@ -1,26 +1,16 @@
-import Image from "next/image";
-import twitter from "@/public/img/twitter.webp";
-import instagram from "@/public/img/instagram.webp";
-import facebook from "@/public/img/facebook.jpg";
-
+"use client";
+import { useMyContext } from "@/Provider/MyContextProvider";
 export default function Footer() {
+    const { theme } = useMyContext();
     return (
-
-        <footer className="flex justify-center flex-col h-35 items-center text-white mt-10">
-            <div id="img-block" className="flex justify-between w-30">
-                <a href="https://www.facebook.com/" target="_blank">
-                    <Image src={facebook} alt="facebook" id="logo" className="size-7 cursor-pointer rounded-lg"/>
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <Image src={instagram} alt="instagram" id="logo" className=" size-7 cursor-pointer rounded-lg"/>
-                </a>
-                <a href="https://www.x.com/" target="_blank">
-                    <Image src={twitter} alt="x" id="logo" className=" size-7 cursor-pointer rounded-lg"/>
-                </a>
-            </div>
-            <p id="copyrigth" className="mt-10">
-                &copy; 2025 Gym-app, créer par le groupe gym-app.
-            </p>
+        <footer
+            className={`flex  h-15 justify-center items-center ${
+                theme === "light"
+                    ? "bg-blue-600"
+                    : "bg-gray-900 border-t-1 border-white"
+            } text-white w-full`}
+        >
+            &copy; 2025 La Cité
         </footer>
     );
 }
