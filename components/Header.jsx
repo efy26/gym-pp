@@ -15,31 +15,23 @@ export default function Header() {
         <header
             className={`flex  h-15 items-center ${
                 theme === "light"
-                    ? "bg-blue-600"
-                    : "bg-gray-900 border-b-1 border-white"
-            } text-white w-full`}
+                    ? "bg-white text-black"
+                    : "bg-gray-900 border-white"
+            } w-full`}
         >
-            <Image
-                src={logo}
-                alt="Logo"
-                width={50}
-                height={50}
-                className="cursor-pointer"
-            />
             <NavBar />
             <button
                 className="ml-auto mr-4 text-2xl cursor-pointer"
                 onClick={toggleTheme}
-                name="theme-toggle-button"
             >
                 {theme === "light" ? <FaMoon /> : <IoMdSunny />}
             </button>
             <select
                 onChange={(e) => i18next.changeLanguage(e.target.value)}
                 defaultValue={i18next.language}
-                className="bg-blue-700 text-white ml-4 p-2 rounded"
+                className="cursor-pointer ml-4 p-2 rounded"
             >
-                <option value="en">EN</option>
+                <option className="cursor-pointer" value="en">EN</option>
                 <option value="fr">FR</option>
             </select>
         </header>

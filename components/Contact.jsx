@@ -4,6 +4,7 @@ import SectionUniverselle from "@/components/home/SectionUniverselle";
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
 import emailjs from '@emailjs/browser'
+import { useMyContext } from "@/Provider/MyContextProvider";
 
 
 
@@ -56,15 +57,20 @@ emailjs
             );
     };
  
-       
+       const { theme, toggleTheme } = useMyContext();
     return (
-        <div className='flex flex-col bg-gray-50 min-h-screen'>
+            
+        <div className={`flex flex-col bg-gray-50 min-h-screen ${
+                        theme === "light"
+                            ? "bg-white text-black"
+                            : "bg-gray-900 text-white"
+                    }`}>
             <SectionUniverselle/>
             <div className='container mx-auto px-4 py-12 max-w-6xl'>
-                <div className='bg-white rounded-lg shadow-xl overflow-hidden'>
+                <div className=' rounded-lg shadow-xl overflow-hidden'>
                     <div className='md:flex'>
                         {/* Section Informations de contact */}
-                        <div className='md:w-1/3 bg-gradient-to-b from-blue-600 to-blue-800 p-8 text-white'>
+                        <div className='md:w-1/3 bg-gradient-to-b  p-8 '>
                             <h2 className='text-2xl font-bold mb-6'>Nous contacter</h2>
                             
                             <div className='space-y-4'>
@@ -105,8 +111,12 @@ emailjs
                         </div>
                         
                         {/* Section Formulaire */}
-                        <div className='md:w-2/3 p-8'>
-                            <h1 className='text-3xl font-bold text-gray-800 mb-6'>Envoyez-nous un message</h1>
+                        <div className={`md:w-2/3 p-8 ${
+                        theme === "light"
+                            ? "bg-white text-black"
+                            : "bg-gray-900 text-white"
+                    }`}>
+                            <h1 className='text-3xl font-bold mb-6'>Envoyez-nous un message</h1>
                             
                             {success && (
                                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6">
@@ -118,7 +128,7 @@ emailjs
                                 <div className='space-y-6'>
                                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                                         <div>
-                                            <label htmlFor="nom" className='block text-sm font-medium text-gray-700 mb-1'>Nom *</label>
+                                            <label htmlFor="nom" className='block text-sm font-medium mb-1'>Nom *</label>
                                             <input
                                                 {...register("nom", { required: "Ce champ est obligatoire" })}
                                                 id="nom"
@@ -132,7 +142,7 @@ emailjs
                                         </div>
                                         
                                         <div>
-                                            <label htmlFor="email" className='block text-sm font-medium text-gray-700 mb-1'>Email *</label>
+                                            <label htmlFor="email" className='block text-sm font-medium  mb-1'>Email *</label>
                                             <input
                                                 {...register("email", {
                                                     required: "Ce champ est obligatoire",
@@ -153,7 +163,7 @@ emailjs
                                     </div>
                                     
                                     <div>
-                                        <label htmlFor="sujet" className='block text-sm font-medium text-gray-700 mb-1'>Sujet *</label>
+                                        <label htmlFor="sujet" className='block text-sm font-medium  mb-1'>Sujet *</label>
                                         <input
                                             {...register("sujet", { required: "Ce champ est obligatoire" })}
                                             id="sujet"
@@ -167,7 +177,7 @@ emailjs
                                     </div>
                                     
                                     <div>
-                                        <label htmlFor="message" className='block text-sm font-medium text-gray-700 mb-1'>Message *</label>
+                                        <label htmlFor="message" className='block text-sm font-medium  mb-1'>Message *</label>
                                         <textarea
                                             {...register("message", { required: "Ce champ est obligatoire" })}
                                             id="message"

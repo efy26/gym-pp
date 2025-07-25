@@ -5,9 +5,9 @@ import Timer1 from "@/public/img/bg-img.avif";
 
 export default function About() {
     return (
-        <div className='flex flex-col'>
+        <div className={`flex flex-col `}>
             <SectionUniverselle/>
-            <div id='about-container' className='flex justify-center'>
+            <div id='about-container' className={`flex justify-center `}>
                     <div id='about-page'>
                         <h1 id='titre-page-about'>ABOUT</h1>
                         <div>
