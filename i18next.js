@@ -11,7 +11,7 @@ i18n.use(Backend)
         fallbackLng: "en",
         debug: false,
         ns: ["common", "header"],
-        preload: ["en", "fr", "sp"],
+        preload: ["en", "fr"],
         interpolation: {
             escapeValue: false, // React already does escaping
         },

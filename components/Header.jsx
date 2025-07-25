@@ -30,6 +30,7 @@ export default function Header() {
             <button
                 className="ml-auto mr-4 text-2xl cursor-pointer"
                 onClick={toggleTheme}
+                name="theme-toggle-button"
             >
                 {theme === "light" ? <FaMoon /> : <IoMdSunny />}
             </button>
@@ -40,7 +41,6 @@ export default function Header() {
             >
                 <option value="en">EN</option>
                 <option value="fr">FR</option>
-                <option value="sp">SP</option>
             </select>
         </header>
     );
