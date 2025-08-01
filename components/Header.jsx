@@ -1,11 +1,7 @@
 "use client";
-import Image from "next/image";
-import logo from "@/public/img/image.webp";
 import NavBar from "@/components/NavBar";
-
 import { FaMoon } from "react-icons/fa";
 import { IoMdSunny } from "react-icons/io";
-
 import { useMyContext } from "@/Provider/MyContextProvider";
 import i18next from "i18next";
 
@@ -13,7 +9,7 @@ export default function Header() {
     const { theme, toggleTheme } = useMyContext();
     return (
         <header
-            className={`flex  h-15 items-center ${
+            className={`flex h-15 items-center ${
                 theme === "light"
                     ? "bg-white text-black"
                     : "bg-gray-900 border-white"
@@ -31,7 +27,7 @@ export default function Header() {
                 defaultValue={i18next.language}
                 className="cursor-pointer ml-4 p-2 rounded"
             >
-                <option className="cursor-pointer" value="en">EN</option>
+                <option value="en">EN</option>
                 <option value="fr">FR</option>
             </select>
         </header>

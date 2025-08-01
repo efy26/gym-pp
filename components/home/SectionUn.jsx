@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function SectionUn() {
     return (
-        <section id="section-un" className="bg-[url(@/public/img/image.webp)] bg-cover bg-center bg-no-repeat min-w-100 h-200 flex  flex-col items-center">
+        <section id="section-un" className="bg-[url('/img/image.webp')] bg-cover bg-center bg-no-repeat min-w-100 h-200 flex  flex-col items-center">
             <Link id="link-home" href="/" className="size-40 mt-80 cursor-pointer">
                 <Image src={logo} alt="Logo" id="logo" />
             </Link>

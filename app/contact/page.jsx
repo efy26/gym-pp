@@ -6,7 +6,7 @@ export const metadata = {
     openGraph: {
         title: 'Contact | gym-app',
         description: 'Page de Contact pour information',
-        images: ['./react.webp']
+        images: ['/react.webp']
     }
 }
 

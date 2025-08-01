@@ -17,7 +17,7 @@ export default function Timer({ compte }) {
     useEffect(() => {
         // Exécuté au chargement du composant dans la page
         const intervalID = setInterval(() => {
-            if (decompte > 0) {
+            if (decompte < 0) {
                 setCompte(decompte - 1);
             } else {
                 clearInterval(intervalID);

@@ -1,22 +1,21 @@
-"use client";
 import Body from "@/components/Body";
-
 import { Inter } from "next/font/google";
 import "./globals.css";
-
-import MyContextProvider from "@/Provider/MyContextProvider";
-import i18n from "@/i18next";
-import { appWithTranslation } from "next-i18next";
-
+import ClientProviders from "@/components/ClientProviders";
+import I18nProviderWrapper from "@/components/I18nProviderWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <MyContextProvider>
-                <Body children={children}  />
-            </MyContextProvider>
+            <body className={inter.className}>
+                <I18nProviderWrapper>
+                    <ClientProviders>
+                        <Body>{children}</Body>
+                    </ClientProviders>
+                </I18nProviderWrapper>
+            </body>
         </html>
     );
 }

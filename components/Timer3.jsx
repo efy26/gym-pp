@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import Timer3 from "@/public/img/timer3.jpeg";
+import Timer3Img from "@/public/img/timer3.jpeg";
 import { useEffect, useState } from 'react'
 
-export default function Timer({ compte }) {
+export default function Timer3({ compte }) {
     const timerShow = new Date("2025-10-30T20:50:05").getTime();
     const dateNow = Date.now();
     const difference = dateNow - timerShow;
@@ -29,7 +29,7 @@ export default function Timer({ compte }) {
     }, [decompte]);
     return <div id='timer3-container'>
 
-            <Image  src={Timer3} alt="Logo" id="timer3-img" className=""/>
+            <Image  src={Timer3Img} alt="Logo" id="timer3-img" className=""/>
 
             <div id='timer3'>
                 <p>
