@@ -9,7 +9,7 @@ export const metadata = {
       description: 'Site web présentant les fonctionnalités de React et Next.js.',
       images: ['/react.webp']
     },
-    manifest: "manifest.json"
+    manifest: "/manifest.json",
 }
 
 
